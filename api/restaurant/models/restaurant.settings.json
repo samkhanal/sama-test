@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurants",
+  "info": {
+    "name": "Restaurant",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "categories": {
+      "via": "restaurants",
+      "collection": "category"
+    },
+    "owner": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "restaurant"
+    }
+  }
+}
