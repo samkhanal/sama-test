@@ -1,3 +1,11 @@
-# Strapi application
+## Install dependencies
 
-A quick description of your strapi application
+```bash
+yarn install
+```
+
+## Start app
+
+```bash
+yarn develop
+```
